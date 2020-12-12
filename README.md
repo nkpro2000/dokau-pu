@@ -1,6 +1,7 @@
 # DokAU for Personal Use
 
 ### 0. New data-root and exec-root
+`/etc/docker/daemon.json`  
 ```json
 {
 "data-root": "/mnt/dokau-data",

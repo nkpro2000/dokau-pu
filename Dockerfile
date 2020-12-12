@@ -32,6 +32,9 @@ RUN sed -i 's/google-chrome-stable %U/google-chrome-stable --no-sandbox %U/g' /u
     sed -i 's/google-chrome %U/google-chrome --no-sandbox %U/g' /usr/share/applications/* && \
     sed -i 's/teams %U/teams --no-sandbox %U/g' /usr/share/applications/*
 
+# Office
+RUN apt-get install -y --no-install-recommends abiword gnumeric zathura
+
 # STARTUP
 ENV RESOLUTION 1366x768
 ENV USER user
