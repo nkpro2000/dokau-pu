@@ -23,8 +23,15 @@ case "$1" in
 	start)
 		sudo docker start dokau
 		;;
+	attach)
+		sudo docker start dokau
+		sudo docker attach dokau
+		;;
+	update-self)
+		curl https://raw.githubusercontent.com/nkpro2000/dokau-pu/master/run.sh -o "$0"		
+		echo 'Edit CGNAME="'"$CGNAME"'" again.' #sed -i 's/CGNAME="$USER" # Edit This./CGNAME="'"$CGNAME"'"/g' "$0"
+		;;
 	*)
 		sudo docker ps -a && echo && sudo docker images
 		;;
 esac
-
