@@ -3,6 +3,7 @@ FROM dorowu/ubuntu-desktop-lxde-vnc
 # Tools
 RUN apt-get update && \
     apt-get install -y --no-install-recommends nam ns2 default-jre default-jdk
+RUN apt-get install -y --no-install-recommends net-tools iputils-ping inetutils-traceroute dnsutils tcpdump wireshark
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
